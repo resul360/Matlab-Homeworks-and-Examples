@@ -1,0 +1,10 @@
+clc
+clear all
+f1=@(x) (sin(x));
+f2=@(x) abs((sin(2*x)))/2;
+
+x0=linspace(0,2*pi,2000);
+y=f1(x0)-f2(x0);
+trapz(x0,y)
+
+Aquadl(f1,0,2*pi)-quadl(f2,0,2*pi)
